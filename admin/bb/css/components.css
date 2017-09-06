@@ -1,0 +1,317 @@
+/*********************************
+ BAYBOON STYLE COMPONENTS 
+*********************************/
+
+/***
+General reset
+***/
+/* Set default body */
+body {
+  color: #333333;
+  font-family: "Open Sans", sans-serif;
+  padding: 0px !important;
+  margin: 0px !important;
+  font-size: 14px;
+  direction: ltr;
+}
+
+
+/***
+Rounded corners reset
+***/
+/* Reset rounded corners for all elements */
+
+button{
+  -webkit-border-radius: 2px !important;
+  -moz-border-radius: 2px !important;
+  border-radius: 2px !important;
+}
+
+
+
+/* except below bootstrap elements */
+.img-circle {
+  border-radius: 50% !important;
+}
+
+.img-rounded {
+  border-radius: 6px !important;
+}
+
+
+/***
+General typography
+***/
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5{
+  font-family: 'montserratregular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+.head-light{
+  font-family: 'montserratlight';
+}
+.head-regular{
+  font-family: 'montserratregular';
+}
+.head-bold{
+  font-family: 'montserratbold';
+}
+
+
+/* Links */
+a {
+  text-shadow: none;
+  color: #003a70;
+}
+a:hover {
+  color: #0c2b47;
+}
+a:focus, a:hover, a:active {
+  outline: 0;
+}
+
+/* Horizontal break */
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 0;
+}
+
+
+.border-none{
+  border-right: 0 !important;
+}
+
+/* Margin and padding utilities */
+.no-space {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.margin-bottom-5 {
+  margin-bottom: 5px;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px !important;
+}
+
+.margin-top-10 {
+  margin-top: 10px !important;
+}
+
+.margin-top-15 {
+  margin-top: 15px !important;
+}
+
+.margin-bottom-15 {
+  margin-bottom: 15px !important;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px !important;
+}
+
+.margin-top-20 {
+  margin-top: 20px !important;
+}
+
+.margin-bottom-25 {
+  margin-bottom: 25px !important;
+}
+
+.margin-bottom-30 {
+  margin-bottom: 30px !important;
+}
+
+.margin-bottom-40 {
+  margin-bottom: 40px !important;
+}
+
+.margin-right-10 {
+  margin-right: 10px !important;
+}
+
+.padr0{ padding-right:0;}
+
+/***
+Customized Bootstrap Close Icon 
+***/
+.close {
+  display: inline-block;
+  margin-top: 0px;
+  margin-right: 0px;
+  width: 9px;
+  height: 9px;
+  background-repeat: no-repeat !important;
+  text-indent: -10000px;
+  outline: none;
+}
+
+/***
+Customized Bootstrap Dropdowns
+***/
+/***
+Dropdowns
+***/
+.dropup.open > .dropdown-toggle,
+.dropdown.open > .dropdown-toggle {
+  border-color: #ddd;
+}
+
+/* Dropdown submenu support for Bootsrap 3 */
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+  top: 5px;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+}
+.dropdown-submenu > a:after {
+  position: absolute;
+  display: inline-block;
+  font-size: 14px;
+  right: 7px;
+  top: 7px;
+  font-family: FontAwesome;
+  height: auto;
+  content: "\f105";
+  font-weight: 300;
+}
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+.dropdown-submenu:hover > a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+}
+.dropup .dropdown-submenu > .dropdown-menu {
+  top: auto;
+  bottom: 0;
+  margin-top: 0;
+  margin-bottom: -2px;
+}
+
+.nav.pull-right > li > .dropdown-menu,
+.nav > li > .dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+.nav.pull-right > li > .dropdown-menu:before,
+.nav > li > .dropdown-menu.pull-right:before {
+  right: 12px;
+  left: auto;
+}
+.nav.pull-right > li > .dropdown-menu:after,
+.nav > li > .dropdown-menu.pull-right:after {
+  right: 13px;
+  left: auto;
+}
+.nav.pull-right > li > .dropdown-menu .dropdown-menu,
+.nav > li > .dropdown-menu.pull-right .dropdown-menu {
+  right: 100%;
+  left: auto;
+  margin-right: -1px;
+  margin-left: 0;
+}
+
+@media (max-width: 767px) {
+  /* 767px */
+  .navbar-nav .open .dropdown-menu {
+    position: absolute;
+    float: left;
+    width: auto;
+    margin-top: 0;
+    background-color: #ffffff;
+    border: 1px solid #efefef;
+    box-shadow: 5px 5px rgba(102, 102, 102, 0.1);
+  }
+  .navbar-nav .open .dropdown-menu > li > a {
+    padding: 6px 0 6px 13px;
+    color: #333;
+  }
+  .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-nav .open .dropdown-menu > li > a:active {
+    background-color: #eee;
+  }
+}
+
+
+
+/***
+Customized Bootstrap Pagination
+***/
+.pagination {
+  margin: 10px 0;
+}
+.pagination.pagination-circle > li:first-child > a {
+  border-radius: 25px 0 0 25px !important;
+}
+.pagination.pagination-circle > li:last-child > a {
+  border-radius: 0 25px 25px 0 !important;
+}
+.pagination .active > a,
+.pagination .active > a:hover {
+  background: #eee;
+  border-color: #dddddd;
+  color: #333;
+}
+
+
+/* General Element */
+.bg-blue {
+  border-color: #3598dc !important;
+  background-image: none !important;
+  background-color: #3598dc !important;
+  color: #FFFFFF !important;
+}
+
+/* General Text & Icon Font Colors */
+.font-blue {
+  color: #3598dc !important;
+}
+
+.progress-bar.blue {
+  background: #3598dc !important;
+  color: #FFFFFF !important;
+}
+
