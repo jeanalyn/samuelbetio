@@ -1,7 +1,7 @@
 /**
 Core script to handle the entire theme and core functions
 **/
-var Bayboon = function() {
+var Samuelbetio = function() {
 
     // IE mode
     var isRTL = false;
@@ -50,7 +50,7 @@ var Bayboon = function() {
         }
     };
 
-    // runs callback functions set by Bayboon.addResponsiveHandler().
+    // runs callback functions set by Samuelbetio.addResponsiveHandler().
     var _runResizeHandlers = function() {
         // reinitialize other subscribed elements
         for (var i = 0; i < resizeHandlers.length; i++) {
@@ -118,7 +118,7 @@ var Bayboon = function() {
                 $('body').removeClass('page-portlet-fullscreen');
                 portlet.children('.portlet-body').css('height', 'auto');
             } else {
-                var height = Bayboon.getViewPort().height -
+                var height = Samuelbetio.getViewPort().height -
                     portlet.children('.portlet-title').outerHeight() -
                     parseInt(portlet.children('.portlet-body').css('padding-top')) -
                     parseInt(portlet.children('.portlet-body').css('padding-bottom'));
@@ -136,7 +136,7 @@ var Bayboon = function() {
             var url = $(this).attr("data-url");
             var error = $(this).attr("data-error-display");
             if (url) {
-                Bayboon.blockUI({
+                Samuelbetio.blockUI({
                     target: el,
                     animate: true,
                     overlayColor: 'none'
@@ -147,11 +147,11 @@ var Bayboon = function() {
                     url: url,
                     dataType: "html",
                     success: function(res) {
-                        Bayboon.unblockUI(el);
+                        Samuelbetio.unblockUI(el);
                         el.html(res);
                     },
                     error: function(xhr, ajaxOptions, thrownError) {
-                        Bayboon.unblockUI(el);
+                        Samuelbetio.unblockUI(el);
                         var msg = 'Error on reloading the content. Please check your connection and try again.';
                         if (error == "toastr" && toastr) {
                             toastr.error(msg);
@@ -168,13 +168,13 @@ var Bayboon = function() {
                 });
             } else {
                 // for demo purpose
-                Bayboon.blockUI({
+                Samuelbetio.blockUI({
                     target: el,
                     animate: true,
                     overlayColor: 'none'
                 });
                 window.setTimeout(function() {
-                    Bayboon.unblockUI(el);
+                    Samuelbetio.unblockUI(el);
                 }, 1000);
             }
         });
@@ -321,7 +321,7 @@ var Bayboon = function() {
     // Handles Bootstrap Accordions.
     var handleAccordions = function() {
         $('body').on('shown.bs.collapse', '.accordion.scrollable', function(e) {
-            Bayboon.scrollTo($(e.target));
+            Samuelbetio.scrollTo($(e.target));
         });
     };
 
@@ -463,7 +463,7 @@ var Bayboon = function() {
 
     // Handles scrollable contents using jQuery SlimScroll plugin.
     var handleScrollers = function() {
-        Bayboon.initSlimScroll('.scroller');
+        Samuelbetio.initSlimScroll('.scroller');
     };
 
     // Handles Image Preview using jQuery Fancybox plugin
@@ -595,7 +595,7 @@ var Bayboon = function() {
             _runResizeHandlers();
         },
 
-        // wrBaybooner function to scroll(focus) to an element
+        // wrSamuelbetioer function to scroll(focus) to an element
         scrollTo: function(el, offeset) {
             var pos = (el && el.size() > 0) ? el.offset().top : 0;
 
@@ -689,10 +689,10 @@ var Bayboon = function() {
 
         // function to scroll to the top
         scrollTop: function() {
-            Bayboon.scrollTo();
+            Samuelbetio.scrollTo();
         },
 
-        // wrBaybooner function to  block element(indicate loading)
+        // wrSamuelbetioer function to  block element(indicate loading)
         blockUI: function(options) {
             options = $.extend(true, {}, options);
             var html = '';
@@ -745,7 +745,7 @@ var Bayboon = function() {
             }
         },
 
-        // wrBaybooner function to  un-block element(finish loading)
+        // wrSamuelbetioer function to  un-block element(finish loading)
         unblockUI: function(target) {
             if (target) {
                 $(target).unblock({
@@ -787,12 +787,12 @@ var Bayboon = function() {
                 icon: "" // put icon before the message
             }, options);
 
-            var id = Bayboon.getUniqueID("Bayboon_alert");
+            var id = Samuelbetio.getUniqueID("Samuelbetio_alert");
 
-            var html = '<div id="' + id + '" class="Bayboon-alerts alert alert-' + options.type + ' fade in">' + (options.close ? '<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>' : '') + (options.icon !== "" ? '<i class="fa-lg fa fa-' + options.icon + '"></i>  ' : '') + options.message + '</div>';
+            var html = '<div id="' + id + '" class="Samuelbetio-alerts alert alert-' + options.type + ' fade in">' + (options.close ? '<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>' : '') + (options.icon !== "" ? '<i class="fa-lg fa fa-' + options.icon + '"></i>  ' : '') + options.message + '</div>';
 
             if (options.reset) {
-                $('.Bayboon-alerts').remove();
+                $('.Samuelbetio-alerts').remove();
             }
 
             if (!options.container) {
@@ -814,7 +814,7 @@ var Bayboon = function() {
             }
 
             if (options.focus) {
-                Bayboon.scrollTo($('#' + id));
+                Samuelbetio.scrollTo($('#' + id));
             }
 
             if (options.closeInSeconds > 0) {
@@ -840,7 +840,7 @@ var Bayboon = function() {
             }
         },
 
-        //wrBaybooner function to update/sync jquery uniform checkbox & radios
+        //wrSamuelbetioer function to update/sync jquery uniform checkbox & radios
         updateUniform: function(els) {
             $.uniform.update(els); // update the uniform checkbox & radios UI after the actual input control state changed
         },
