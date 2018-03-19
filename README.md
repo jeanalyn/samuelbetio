@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <title>Habitat Documentation</title>
+        <title>Samuel Betio Documentation</title>
         <meta name="description" content="Installation Documentation for your Bootstrap Template" />
         <meta name="keywords" content="boostrap, template, documentaion" />
         <meta name="robots" content="noindex, nofollow">
